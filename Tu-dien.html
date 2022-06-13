@@ -5,6 +5,29 @@
     <title>Tu dien</title>
 </head>
 <body>
-
+<input type="text" id="a">
+<button onclick="dich">Dịch</button>
+<p id="b"></p>
 </body>
 </html>
+<script>
+
+    function dich(){
+        let a = document.getElementById("a").value
+        let x = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let y = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        let ketqua
+
+        for (let i=0;i<x.length;i++){
+                if (a===x[i]){
+                    for (let j=0;j<y.length;j++){
+                        if (i===j){
+                            ketqua = y[i]
+                        }
+                    }
+                }
+        }
+        console.log(ketqua)
+        document.getElementById("b").innerHTML = ketqua
+    }
+</script>
